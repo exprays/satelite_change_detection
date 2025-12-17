@@ -22,6 +22,15 @@ A comprehensive satellite imagery change detection system that identifies differ
   - Color-coded change overlays
   - Statistical analysis
 
+- **Advanced Metrics**:
+
+  - Kappa Coefficient (Cohen's Kappa)
+  - F1 Score
+  - Precision & Recall
+  - Overall Accuracy
+  - False Positive/Negative Rates
+  - Confusion Matrix
+
 - **Google Colab Compatible**: Run directly in your browser with GPU support
 
 - **Export Capabilities**: Save results as PNG images and detailed statistics
@@ -253,7 +262,13 @@ After running the notebook, you'll get:
 
 - **Change Masks**: Binary images showing detected changes
 - **Overlay Images**: Changes highlighted on original images
-- **Statistics File**: Detailed metrics (area, percentage, regions)
+- **Statistics File**: Detailed metrics including:
+  - Basic statistics (area, percentage, regions)
+  - Kappa Coefficient for agreement assessment
+  - F1 Score for overall performance
+  - Precision and Recall metrics
+  - Confusion matrix (TP, TN, FP, FN)
+  - False Positive/Negative rates
 - **Difference Maps**: Heatmaps showing change intensity
 
 ## 🎯 Examples
