@@ -9,12 +9,14 @@ A comprehensive satellite imagery change detection system that identifies differ
 ## 🌟 Features
 
 - **Multiple Detection Methods**:
+
   - Image Differencing
   - Adaptive Thresholding
   - Change Vector Analysis (CVA)
   - Deep Learning (Siamese Network)
 
 - **Comprehensive Visualization**:
+
   - Side-by-side before/after comparisons
   - Heatmaps and difference maps
   - Color-coded change overlays
@@ -42,6 +44,7 @@ A comprehensive satellite imagery change detection system that identifies differ
 ### Option 1: Google Colab (Recommended)
 
 1. Open the notebook in Google Colab:
+
    - Upload `satellite_change_detection.ipynb` to Google Colab
    - Or use: `File > Upload notebook`
 
@@ -91,6 +94,7 @@ jupyter>=1.0.0
 ```
 
 Install all at once:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -157,24 +161,28 @@ jupyter notebook
 ## 🔬 Methods Explained
 
 ### 1. Image Differencing
+
 - Simple pixel-wise subtraction between images
 - Fast and computationally efficient
 - Works well for significant changes
 - **Best for**: Quick analysis, large structural changes
 
 ### 2. Thresholding
+
 - Converts difference map to binary change mask
 - Adjustable threshold values
 - Morphological operations to reduce noise
 - **Best for**: Clear change detection with minimal false positives
 
 ### 3. Change Vector Analysis (CVA)
+
 - Analyzes spectral change magnitude and direction
 - Considers all color channels simultaneously
 - Percentile-based thresholding
 - **Best for**: Multi-spectral satellite data, subtle changes
 
 ### 4. Deep Learning (Siamese Network)
+
 - CNN-based feature extraction
 - Learns complex change patterns
 - Requires training data for best results
@@ -251,18 +259,21 @@ After running the notebook, you'll get:
 ## 🎯 Examples
 
 ### Urban Development Detection
+
 ```python
 # Useful for detecting new buildings, roads, infrastructure
 # Use CVA or Deep Learning methods for best results
 ```
 
 ### Deforestation Monitoring
+
 ```python
 # Track forest loss over time
 # Threshold method works well for vegetation changes
 ```
 
 ### Disaster Assessment
+
 ```python
 # Flood extent, fire damage, earthquake impact
 # Image differencing provides quick initial assessment
@@ -282,7 +293,7 @@ change_mask = threshold_changes(diff_image, threshold=25)  # Lower = more sensit
 ```python
 # In Section 9, adjust percentile
 magnitude, direction, cva_mask = change_vector_analysis(
-    before_proc, after_proc, 
+    before_proc, after_proc,
     threshold_percentile=85  # Lower = more changes detected
 )
 ```
@@ -314,6 +325,7 @@ history = model.fit(
 ### Common Issues
 
 **1. Memory Error with Large Images**
+
 ```python
 # Resize images before processing
 target_size = (512, 512)
@@ -323,6 +335,7 @@ before_proc, after_proc, before_norm, after_norm = preprocess_images(
 ```
 
 **2. Images Not Aligned**
+
 ```python
 # Use image registration (requires additional setup)
 import cv2
@@ -331,6 +344,7 @@ import cv2
 ```
 
 **3. TensorFlow/GPU Issues in Colab**
+
 ```python
 # Check GPU availability
 import tensorflow as tf
